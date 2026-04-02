@@ -109,7 +109,7 @@ function App() {
 
   const placeOrder = async () => {
     const res = await axios.post(`${BASE_URL}/order/orders`);
-    alert(res.data.message);
+    alert(`The details of the order : ${res.data.message}, Total: ${JSON.stringify(res.data.total)}`);
     console.log(res.data);
   };
 

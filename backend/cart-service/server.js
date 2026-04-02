@@ -32,5 +32,9 @@ app.delete('/:id',(req,res)=>{
     cart=cart.filter(item=>item._id!==req.params.id);
     res.send("Removed from cart");
 });
+app.delete('/', (req, res) => {
+  cart = [];
+  res.send("Cart cleared");
+});
 
 app.listen(3003, () => console.log("Cart service running"));
